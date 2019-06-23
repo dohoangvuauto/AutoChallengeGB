@@ -6,11 +6,11 @@ Feature: This feature deals with Left Side Menu functionality of GoBear applicat
     And User click on Show My Results
     Then User is redirected to "Travel Result Page"
 
-  @regression
+  @smoke
   Scenario: Verify at least 3 cards displayed
     Then There are at least 3 cards displayed
 
-  @regression
+  @smoke
   Scenario: Change filter options
     When User select insurer checkbox is "Pacific Cross"
     Then Page show results with insurer "Pacific Cross" only
@@ -18,17 +18,17 @@ Feature: This feature deals with Left Side Menu functionality of GoBear applicat
     And User set range of "Trip termination" from 50000 to 100000
     Then Page show results with range of "Trip termination" from 50000 to 100000 only
 
-  @regression
+  @smoke
   Scenario: Change sort options
     When User sort results by price "High to Low"
     Then Page show results sorted by price "High to Low"
 
-  @regression @wipMobile
+  @smoke @wipMobile
   Scenario: Change details of destination
     When User change details of destination into "Singapore"
     Then Page show results with destination is "Singapore" only
 
-  @regression @wipMobile
+  @smoke @wipMobile
   Scenario: Change details of travel start-end date
     When User select travel start date with day "15" and month "Aug" and year "2019"
     When User select travel end date with day "30" and month "Aug" and year "2019"

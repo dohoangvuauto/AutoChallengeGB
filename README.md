@@ -1,7 +1,7 @@
 # GoBear - WebApp Automation - Travel Insurance
 
 ## Summary
->Automated Testing Framework using Page Factory design pattern and integrate with Cucumber-Appium to test the functionality of GoBear application on cross-platform and multi-platform browsers.
+>Automated Testing Framework using Page Factory design pattern and integrate with Cucumber-Appium to test the functionality of GoBear application on cross-platform and multi-platform browsers with BDD.
 
 ## Installation and Requirements
 
@@ -26,23 +26,23 @@
 - pages: Page Object reporistory. Page class contains specific web elements and methods for its screen
 - runner: Cucumber Runners with JUnit - so you can debug on these classes
 - stepdefs: map and define steps of scenarios in feature files
-- utils: Build entity of custom services as WebActions, ReadPropertyFile, PageObjects, ApiActions, DbActions...
+- utils: Build entity of custom services as WebActions, ReadPropertyFile, PageObjects, ApiActions, DbActions...(TBD)
 
 ## Usage
 
 Run test cases with specific tag with Cucumber Options for windows desktop by CMD:
 
 ```
-mvn clean verify -Dcucumber.options="--tags '@regression'" -Denv=uat -P windows
+mvn clean verify -Dcucumber.options="--tags '@smoke'" -Denv=uat -P windows
 ```
 
-Or mobile web view - Browserstack
+Or mobile web view - Browserstack (optional)
 
 ```
 mvn clean verify "-Dcucumber.options=--tags '~@wipMobile'" -Denv=uat -P galaxys8
 ```
 
-Or run specific test by using following command:
+Or run specific test by using following command: (optional)
 
 ```
 mvn clean verify -Dtest=TestLeftSidemenu -Denv=uat -P iphone8plus
